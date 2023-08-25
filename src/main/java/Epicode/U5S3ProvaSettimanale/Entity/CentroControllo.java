@@ -23,13 +23,16 @@ public class CentroControllo implements Subject{
 
 	@Override
 	public void registraSonda(Observer o) {
-		// TODO Auto-generated method stub
+		Sonde.add((Sonda) o);
 		
 	}
 
 	@Override
 	public void notifica(Observer o) {
-		// TODO Auto-generated method stub
+		
+		for (Sonda s : Sonde) {
+			s.controlloFumo();
+		}
 		
 	}
 

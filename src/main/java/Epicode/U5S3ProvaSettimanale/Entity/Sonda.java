@@ -14,17 +14,27 @@ import lombok.ToString;
 public class Sonda implements Observer{
 	
 	private int id;
-	private String latitudine;
-	private String longitudine;
+	private String lat;
+	private String longi;
 	private int livelloFumo = 0;
+	
+	
+	public String notificationURL() {
+		return "http://host/alarm?idsonda=" +id + "&lat=" + lat + "&lon" +longi + "&smokelevel=" + livelloFumo;
+	}
+	
 	
 	
 	@Override
 	public void controlloFumo() {
-		// TODO Auto-generated method stub
+		if (this.livelloFumo > 5) {
+			
+			String URL = notificationURL();
+			
+			System.out.println("Sonda id " + id + " con latitudine " +lat + " e longitudine " +longi + " registra un livello di fumo pari a " +livelloFumo);
+			System.out.println("Centro di controllo: " + URL);
+		}
 		
 	}
-	
-
 	
 }
