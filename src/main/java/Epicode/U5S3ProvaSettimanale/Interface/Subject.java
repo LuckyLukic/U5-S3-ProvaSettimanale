@@ -4,6 +4,6 @@ public interface Subject {
 	
 	public void registraSonda(Observer o);
 	
-	public void notifica(Observer o);
+	public void notifica();
 
 }

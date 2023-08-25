@@ -14,8 +14,8 @@ import lombok.ToString;
 public class Sonda implements Observer{
 	
 	private int id;
-	private String lat;
-	private String longi;
+	private double lat;
+	private double longi;
 	private int livelloFumo = 0;
 	
 	
