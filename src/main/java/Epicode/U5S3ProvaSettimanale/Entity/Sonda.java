@@ -20,7 +20,7 @@ public class Sonda implements Observer{
 	
 	
 	public String notificationURL() {
-		return "http://host/alarm?idsonda=" +id + "&lat=" + lat + "&lon" +longi + "&smokelevel=" + livelloFumo;
+		return "http://host/alarm?idsonda=" +id + "&lat=" + lat + "&lon=" +longi + "&smokelevel=" + livelloFumo;
 	}
 	
 	
